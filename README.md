@@ -88,3 +88,5 @@ A SOAP UI Test suite has been provided and located at the following location
 ```
 rest-soap-ws/src/test/soapui/REST-Project-1-soapui-project.xml
 ```
+
+The Soap UI test suite contains the unit test cases for REST as well as SOAP WS calls. A load test is also provided (under REST SOAP Test Suite: Push->GCD) to test the concurrency for 20 users simultaneously.
