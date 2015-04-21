@@ -47,21 +47,21 @@ You configure the the JMS test queue by running JBoss CLI commands. For your con
 Before you begin, back up your server configuration file
 If it is running, stop the JBoss EAP server.
 ```
-Backup the file: EAP_HOME/standalone/configuration/standalone-full.xml
+Backup the file: $EAP_HOME/standalone/configuration/standalone-full.xml
 ```
 After you have completed testing this quickstart, you can replace this file to restore the server to its original configuration.
 
 Start the JBoss EAP server by typing the following:
 ```
- For Linux:  EAP_HOME/bin/standalone.sh -c standalone-full.xml
- For Windows:  EAP_HOME\bin\standalone.bat -c standalone-full.xml
+ For Linux:  $EAP_HOME/bin/standalone.sh -c standalone-full.xml
+ For Windows:  $EAP_HOME\bin\standalone.bat -c standalone-full.xml
 ```
 Review the configure-jms.cli file in the root of this quickstart directory. This script adds the test queue to the messaging subsystem in the server configuration file.
 
 Open a new command prompt, navigate to the root directory of this quickstart, and run the following command, replacing EAP_HOME with the path to your server:
 ```
- For Linux: EAP_HOME/bin/jboss-cli.sh --connect --file=configure-jms.cli 
- For Windows: EAP_HOME\bin\jboss-cli.bat --connect --file=configure-jms.cli  
+ For Linux: $EAP_HOME/bin/jboss-cli.sh --connect --file=configure-jms.cli 
+ For Windows: $EAP_HOME\bin\jboss-cli.bat --connect --file=configure-jms.cli  
  ```
 You should see the following result when you run the script:
 ```
@@ -73,8 +73,8 @@ You should see the following result when you run the script:
 Open a command prompt and navigate to the root of the JBoss EAP directory.
 The following shows the command line to start the server with the full profile:
 ```
- For Linux:   EAP_HOME/bin/standalone.sh -c standalone-full.xml
- For Windows: EAP_HOME\bin\standalone.bat -c standalone-full.xml
+ For Linux:   $EAP_HOME/bin/standalone.sh -c standalone-full.xml
+ For Windows: $EAP_HOME\bin\standalone.bat -c standalone-full.xml
 ```
 ##Build and Execute
 You can execute the application using the below maven command, however before this EAP_HOME should be set
