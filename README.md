@@ -82,4 +82,9 @@ You can execute the application using the below maven command, however before th
 mvn clean install jboss-as:deploy
 ```
 
+##Test Cases
+A SOAP UI Test suite has been provided and located at the following location
 
+```
+rest-soap-ws/src/test/soapui/REST-Project-1-soapui-project.xml
+```
