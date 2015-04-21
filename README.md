@@ -90,3 +90,11 @@ rest-soap-ws/src/test/soapui/REST-Project-1-soapui-project.xml
 ```
 
 The Soap UI test suite contains the unit test cases for REST as well as SOAP WS calls. A load test is also provided (under REST SOAP Test Suite: Push->GCD) to test the concurrency for 20 users simultaneously.
+
+##Assumptions
+* As per the requirement REST would act as the producer of the message in JMS, whereas SOAP WS would be the consumer of the JMS message
+* The JMS message produced (via REST -> push) and consumption (via SOAP -> gcd) would happen only when we send the appropiate request. No consumption or production of the message would happen automatically
+* Considering the database to save JMS messages si not provided, due to which the JMS message is not saved in case of JMS queue failure. 
+* Both REST and SOAP WS calls would be executed seperately on different machines by different users. 
+* Also, as the database is not available, the JMS message produced and JMS message consumed would be kept in a static list on there respective classes.
+* To consume the messages from the queue, we are waiting for 5000 ms after which the consumer would throw a JMSException with error code ERR101. If no message is found to be consumed. 
